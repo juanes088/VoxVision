@@ -1,0 +1,268 @@
+/* ============================================================
+   Tema claro profesional (Azure DevOps / CRM).
+   Paleta: fondo neutro, tarjetas blancas, borde fino, acento azul.
+   ============================================================ */
+
+QMainWindow,
+QWidget {
+    background: #f3f2f1;
+    color: #201f1e;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+}
+
+/* ---- Cabecera ---- */
+#titulo {
+    font-size: 19px;
+    font-weight: 600;
+    color: #201f1e;
+    padding: 6px 2px 12px 2px;
+    border-bottom: 2px solid #0078d4;
+}
+
+/* ---- Etiquetas de seccion ---- */
+#etiqueta_chat {
+    font-size: 13px;
+    font-weight: 600;
+    color: #323130;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 2px 0;
+}
+#titulo_tira {
+    color: #605e5c;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ---- Video como tarjeta ---- */
+#video {
+    background: #201f1e;
+    border: 1px solid #e1dfdd;
+    border-radius: 6px;
+    color: #a19f9d;
+}
+
+/* ---- Historial de conversacion (tarjeta) ---- */
+QTextEdit {
+    background: #ffffff;
+    color: #201f1e;
+    border: 1px solid #e1dfdd;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 13px;
+    selection-background-color: #cfe4fa;
+    selection-color: #201f1e;
+}
+
+/* ---- Entrada de texto ---- */
+QLineEdit {
+    background: #ffffff;
+    color: #201f1e;
+    border: 1px solid #c8c6c4;
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-size: 13px;
+}
+QLineEdit:focus {
+    border: 1px solid #0078d4;
+}
+
+/* ---- Botones secundarios (Fluent neutro) ---- */
+QPushButton {
+    background: #ffffff;
+    color: #201f1e;
+    border: 1px solid #c8c6c4;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 13px;
+}
+QPushButton:hover {
+    background: #f3f2f1;
+    border: 1px solid #b3b0ad;
+}
+QPushButton:pressed {
+    background: #edebe9;
+}
+QPushButton:disabled {
+    color: #a19f9d;
+    background: #f3f2f1;
+    border: 1px solid #e1dfdd;
+}
+
+/* ---- Boton primario (Enviar) ---- */
+#boton_enviar {
+    background: #0078d4;
+    color: #ffffff;
+    border: 1px solid #0078d4;
+    font-weight: 600;
+}
+#boton_enviar:hover {
+    background: #106ebe;
+    border: 1px solid #106ebe;
+}
+#boton_enviar:pressed {
+    background: #005a9e;
+    border: 1px solid #005a9e;
+}
+
+/* ---- Boton de audio: azul primario; rojo al grabar ---- */
+#boton_voz {
+    background: #0078d4;
+    color: #ffffff;
+    border: 1px solid #0078d4;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px;
+}
+#boton_voz:hover {
+    background: #106ebe;
+    border: 1px solid #106ebe;
+}
+#boton_voz:pressed {
+    background: #005a9e;
+}
+#boton_voz[grabando="true"] {
+    background: #d13438;
+    border: 1px solid #d13438;
+}
+#boton_voz[grabando="true"]:hover {
+    background: #c02b30;
+    border: 1px solid #c02b30;
+}
+
+/* ---- Selector de modo ---- */
+QComboBox {
+    background: #ffffff;
+    color: #201f1e;
+    border: 1px solid #c8c6c4;
+    border-radius: 4px;
+    padding: 6px 10px;
+    min-width: 130px;
+}
+QComboBox:hover {
+    border: 1px solid #b3b0ad;
+}
+QComboBox:focus {
+    border: 1px solid #0078d4;
+}
+QComboBox::drop-down {
+    border: none;
+    width: 22px;
+}
+QComboBox QAbstractItemView {
+    background: #ffffff;
+    border: 1px solid #e1dfdd;
+    selection-background-color: #cfe4fa;
+    selection-color: #201f1e;
+    outline: none;
+}
+
+/* ---- Tira de frames (tarjeta) ---- */
+#area_tira {
+    background: #ffffff;
+    border: 1px solid #e1dfdd;
+    border-radius: 6px;
+}
+#miniatura {
+    border: 1px solid #e1dfdd;
+    border-radius: 3px;
+}
+#miniatura[estado="elegida"] {
+    border: 2px solid #107c10;
+}
+#miniatura[estado="descartada"] {
+    border: 1px solid #edebe9;
+}
+
+/* ---- Onda de audio (grabacion) ---- */
+#onda_audio {
+    background: transparent;
+}
+
+/* ---- Popup central de frames seleccionados ---- */
+#overlay_frames {
+    background: rgba(32, 31, 30, 0.55);
+}
+#tarjeta_seleccion {
+    background: #ffffff;
+    border: 1px solid #e1dfdd;
+    border-radius: 10px;
+}
+#titulo_seleccion {
+    font-size: 15px;
+    font-weight: 600;
+    color: #201f1e;
+    letter-spacing: 0.5px;
+}
+#frame_seleccion {
+    border: 2px solid #107c10;
+    border-radius: 4px;
+}
+
+/* ---- Barra inferior ---- */
+#estado {
+    color: #605e5c;
+    font-size: 12px;
+}
+
+/* ---- Indicador Escuchando / Pensando / Respuesta ---- */
+#estado_conversacion {
+    color: #0078d4;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+QLabel {
+    color: #201f1e;
+    font-size: 13px;
+}
+
+/* ---- Scrollbars: pastilla flotante azul agua, canal transparente ---- */
+QScrollBar:vertical,
+QScrollBar:horizontal {
+    background: transparent;
+    border: none;
+    margin: 0;
+}
+QScrollBar:vertical {
+    width: 14px;
+}
+QScrollBar:horizontal {
+    height: 14px;
+}
+QScrollBar::handle:vertical,
+QScrollBar::handle:horizontal {
+    background: #a5dbe8;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical {
+    min-height: 32px;
+    margin: 3px 4px 3px 4px;   /* deja aire a los lados = pastilla fina */
+}
+QScrollBar::handle:horizontal {
+    min-width: 40px;
+    margin: 4px 3px 4px 3px;
+}
+QScrollBar::handle:hover {
+    background: #8fd0e0;
+}
+QScrollBar::handle:pressed {
+    background: #74c2d6;
+}
+/* Sin flechas ni fondo de pagina */
+QScrollBar::add-line,
+QScrollBar::sub-line {
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: none;
+}
+QScrollBar::add-page,
+QScrollBar::sub-page {
+    background: transparent;
+}
