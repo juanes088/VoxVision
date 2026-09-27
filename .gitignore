@@ -1,0 +1,34 @@
+# Entornos virtuales
+.venv/
+.venv_motor/
+.venv_interfaz/
+.entorno/
+.entorno_interfaz/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Secretos y entorno local
+.env
+
+# Modelos y binarios pesados (se descargan aparte)
+modelos/
+bin/
+externos/
+*.onnx
+*.pt
+*.gguf
+
+# Generado en tiempo de ejecucion
+almacenamiento/
+salida/
+*.wav
+
+# Sistema / editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
